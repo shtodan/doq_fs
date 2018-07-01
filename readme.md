@@ -27,9 +27,9 @@
 3. run "python manage.py createsuperuser" to createsuperuser
 4. run "python manage.py runserver" to start frontend app server
 5. visit started frontend app to add needed inital data:
-	5.1 add new location(full path) which will be served as root dir to logged user http://127.0.0.1:8000/admin/fs/location/add/
-	5.2 link location to user http://127.0.0.1:8000/admin/fs/userroot/add/
-	5.3 add new user which will be used by backend app to post tokens to frontend http://127.0.0.1:8000/admin/auth/user/add/
+	- add new location(full path) which will be served as root dir to logged user http://127.0.0.1:8000/admin/fs/location/add/
+	- link location to user http://127.0.0.1:8000/admin/fs/userroot/add/
+	- add new user which will be used by backend app to post tokens to frontend http://127.0.0.1:8000/admin/auth/user/add/
 
 ## backend Flask app
 - install "pipenv" for python 2.7
@@ -37,6 +37,10 @@
 - activate env with command "pipenv shell"
 
 1. in backend app fs/fs.py 
-	1.1 set inserted backend user (5.3) creadentoials 
-	1.2 set frontend app addresses (possible to have multiple frontend apps)
+	- set inserted backend user creadentoials 
+    - set frontend app addresses (possible to have multiple frontend apps)
 2. start backend app with default port 5000 or custom port which is needed to be set in doq/fs/views.py in method "backend_auth"
+
+
+
+
