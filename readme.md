@@ -25,7 +25,7 @@
 1. set doq database params at doq/doq/settings.py
 2. run "python manage.py migrate" to make init model tables
 3. run "python manage.py createsuperuser" to createsuperuser
-4. run "python manage.py runserver" to start frontend app server
+4. run "python manage.py runserver" or "pipenv run gunicorn -b 0.0.0.0:8000 -p doq.pid doq.wsgi" to start frontend app server
 5. visit started frontend app to add needed inital data:
 	- add new location(full path) which will be served as root dir to logged user http://127.0.0.1:8000/admin/fs/location/add/
 	- link location to user http://127.0.0.1:8000/admin/fs/userroot/add/
@@ -39,7 +39,7 @@
 1. in backend app fs/fs.py 
 	- set inserted backend user creadentoials 
     - set frontend app addresses (possible to have multiple frontend apps)
-2. start backend app with default port 5000 or custom port which is needed to be set in doq/fs/views.py in method "backend_auth"
+2. start backend app ("python fs.py" or "pipenv run gunicorn wsgi -b 0.0.0.0:5000 -p fs.pid") with default port 5000 or custom port which is needed to be set in doq/fs/views.py in method "backend_auth"
 
 
 
