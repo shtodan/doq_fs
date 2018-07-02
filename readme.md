@@ -8,7 +8,7 @@
    - project is stored in doq directory
    -  Django app used for viewing and serving FileSystem content hosted on "backend app"
    - Comunicate with "backend app" through API
-   - User auth			- project is stored in doq directory
+   - User auth and serving location settings are stored in this app
 
  ## "backend app"
  - project is stored in fs directory
